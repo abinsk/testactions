@@ -33,5 +33,5 @@ jobs:
     - name: Run Tests
       run: |
         cd test-repo
-        testit.py
+        python testit.py
         
