@@ -22,10 +22,16 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: abinsk/testaction2
+          path: test-repo
+          run: |
+            cd test-repo
+            ./testit.py
 
       # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, worldAA!
+      
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
